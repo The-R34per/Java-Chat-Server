@@ -53,9 +53,9 @@ Start the Server
  
  	To add multiple clients to the same server, simply run the ChatClient.java again.
  
- 	java ChatClient <server-ip> <port>
+ 	(java ChatClient <server-ip> <port>)
 
----
+---------------
 
 How It Works:
 
@@ -67,7 +67,7 @@ The server receives the encrypted message and broadcasts it to all connected cli
 
 Each client decrypts incoming messages using CryptoUtil.decrypt().
 
-
+---------------
 
 Requirements:
 
@@ -75,6 +75,7 @@ Java 8 or later
 Network or localhost environment
 Shared password (hardcoded in CryptoUtil)
 
+---------------
 
 Security Notes:
 
@@ -86,7 +87,7 @@ External configuration files not stored in version control
 
 This project is intended for learning and local experimentation, not production-grade secure messaging.
 
-
+---------------
 
 License:
 
@@ -98,6 +99,7 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/
 AI Assistance Attribution:
 Portions of this project were developed with help from Microsoft Copilot and ChatGPT.
 
+---------------
 
 Contributions:
 
