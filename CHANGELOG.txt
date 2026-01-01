@@ -1,0 +1,11 @@
+Version 1.0.0
+
+Initial release of the encrypted chat client and server
+
+Implemented AES encryption using CryptoUtil.java
+
+Added multi-client support with broadcast messaging
+
+Added README, LICENSE, and USAGE documentation.
+
+Basic error handling and connection management.
