@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 
 /*
  	Author - The-R34per
-	Last Updated October 20th, 2025
+	Last Updated January 22nd, 2026
 	
 	
     ChatClientGUI.java  © 2025 by The-R34per
