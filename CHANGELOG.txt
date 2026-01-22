@@ -5,3 +5,10 @@ Version 1.0.0
 - Added multi-client support with broadcast messaging
 - Added README, LICENSE, and USAGE documentation.
 - Basic error handling and connection management.
+
+
+Version 1.1.0
+
+- Stripped away the encryption to reslove issue with chats not appearing for client. 
+- Removed password for client connection
+- Cleaned up code
