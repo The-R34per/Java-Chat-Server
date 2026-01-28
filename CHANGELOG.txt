@@ -12,3 +12,15 @@ Version 1.1.0
 - Stripped away the encryption to reslove issue with chats not appearing for client. 
 - Removed password for client connection
 - Cleaned up code
+- Moved to seperate folder in Repository
+
+
+Version 1.2.0 (UnEcrypted Chat Application)
+
+- Refactored entire server and client codebase for clarity and maintainability.
+- Added admin kick system with password protection (admin123).
+- Added server shutdown broadcast and client countdown window.
+- Created a GUI layout with fonts, user list, and active log features.
+- Added log saving feature to the server control panel.
+- Fixed multiple disconnect, user list, and threading issues.
+- Cleaned up all classes, added comments for better understanding.
