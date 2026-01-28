@@ -1,0 +1,92 @@
+# UnEncrypted Chat Server – Version 1.2.0
+==========================================
+Released January 2026 - The-R34per
+
+
+# Overview
+This update represents a major refactor and modernization of the original UnEncrypted Chat Server. 
+The entire codebase has been cleaned, reorganized, documented, and expanded with new features, improved GUI behavior, better server control, and a more robust client/server communication model.
+
+
+# Added
+=========
+-> New ChatServer class  
+Replaced the old ExampleChatServer with a fully‑refactored ChatServer class featuring clearer structure, improved naming, and professional documentation.
+
+-> Admin Kick System (GUI + Client)
+Server GUI now includes a Kick User button with a selection dialog.
+Clients can kick users using /kickuser with the admin password (default admin password is "admin123").
+Server broadcasts kick notifications to all users.
+
+-> Admin password prompt added on the client side.
+
+-> Server Shutdown Broadcast
+Server sends a SERVER_SHUTDOWN command to all clients.
+Clients display a shutdown countdown window before exiting.
+
+-> Dynamic Host + Port Selection
+Server GUI prompts for IP and port at startup.
+Client GUI prompts for host, port, and display name.
+
+-> Improved Client Disconnect Handling
+Server logs disconnects with formatted output.
+
+-> Client receives a message when kicked or disconnected.
+
+-> ASCII Art Banner in Server GUI
+Added a centered banner with version info and author credit.
+
+-> Log Saving System
+Server GUI now includes a Save Log button.
+Saves full server log to a user‑selected file.
+
+
+# Changed
+===========
+
+-> Complete rewrite of server start logic
+Replaced new ServerSocket(port) with explicit binding using InetSocketAddress(host, port).
+
+-> Renamed and reorganized classes
+Updated all references across the project.
+
+-> Improved GUI layout and styling
+Monospaced fonts for logs and user lists.
+Better spacing, borders, and panel organization.
+
+-> Client message handling refactored
+Cleaner separation of commands (/userList, /kickuser, shutdown, etc.).
+Removed duplicate logic and improved readability.
+
+-> Threading improvements
+Server runs on a background thread to avoid freezing the GUI.
+Client reader thread marked as daemon.
+
+-> Enhanced logging
+More consistent formatting.
+Clear separators for connect/disconnect events.
+
+
+# Fixed
+=========
+
+-> Client list not updating correctly
+Now updates on connect, disconnect, and kick events.
+
+-> Incorrect GUI title before display name was set
+Title now updates after the client successfully connects.
+
+-> Multiple /userList parsing issues
+Consolidated into a single, reliable handler.
+
+-> Server not closing cleanly on window exit
+Now shuts down all clients and closes the socket properly.
+
+
+# Removed
+===========
+
+-> Deprecated or unused code from the original version, including:
+Old console‑only server dashboard.
+Unused variables and commented‑out sections.
+Legacy ExampleChatServer references.
