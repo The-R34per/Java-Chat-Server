@@ -1,0 +1,99 @@
+# How to Run the UnEncrypted Chat Server and Client
+====================================================
+This guide explains how to compile and run the Chat Server and Chat Client included in this project. 
+It also lists any passwords used by the system so administrators are aware of them.
+
+
+# Requirements
+===============
+- Java 8 or higher
+- A Java‑capable IDE (IntelliJ, Eclipse, VS Code) OR command‑line tools
+- The project source files from this repository
+
+
+# Running the Server
+=====================
+1) Open the project in your IDE or navigate to the source directory in a terminal.
+
+2) Locate and run the following files:
+
+- ChatServer.java
+``` javac ChatServer.java ```
+``` java ChatServer ```
+
+3) When launched, the server will prompt for:
+
+- IP Address to bind to
+Use 0.0.0.0 to listen on all interfaces (This is your local host, used for testing)
+
+- Port number
+Default: 5050
+
+4) The Server Control Panel will appear, showing:
+
+- Server log output
+- Active user list
+- Buttons for saving logs, stopping the server, and kicking users
+
+The server begins listening immediately after startup.
+
+
+# Running the Client
+=====================
+
+1) Locate and run:
+
+- ChatClientGUI
+``` java ChatClientGUI.java ```
+``` javac ChatClientGUI ```
+
+2) The client will prompt for:
+
+- Server host (must match the server)
+- Server port (must match the server)
+- Display name
+
+3) After connecting, the client window will show:
+
+- Incoming messages
+- Your own sent messages
+- Any server notifications
+
+
+# Admin Features
+=================
+
+- Kick User Command (Client Side)
+Users with admin access can initiate a kick request by typing:
+
+``` /kickuser ```
+
+The client will prompt for the admin password.
+The admin password is hard‑coded in the client:
+
+``` admin123 ```
+
+This password is required to request the active user list and initiate a kick action.
+
+
+# Kick User (Server Side)
+==========================
+
+The server GUI includes a Kick User button that allows the administrator to select and remove a connected user.
+
+
+# Server Shutdown Behavior
+===========================
+
+When the server is stopped (via the GUI or window close):
+
+- All clients receive a SERVER_SHUTDOWN command.
+- Clients display a shutdown countdown window.
+- Clients exit automatically after the countdown.
+
+
+# Notes
+========
+- This version of the chat system is unencrypted and intended for LAN or educational use.
+- The server must be running before any clients attempt to connect.
+- All passwords are hardcoded.
